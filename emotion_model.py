@@ -70,9 +70,6 @@ from datetime import timedelta
 trainFeatures = np.load('train_features.npy')
 trainLabels = np.load('train_labels.npy')
 
-testFeatures = np.load('test_features.npy')
-testLabels = np.load('test_labels.npy')
-
 def next_batch(n):
 	choices = np.random.choice(trainFeatures.shape[0], size=n, replace=False)
 	return trainFeatures[choices, :], trainLabels[choices, :]
